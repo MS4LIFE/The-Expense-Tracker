@@ -43,19 +43,16 @@ function addExpense() {
 addExpenseBtn.addEventListener("click", addExpense)
 
 function deleteExpense(index) {
-    if (index >= 0 && index < expenses.length) {
-        const deletedExpense = expenses[index];
-        total -= deletedExpense.amount;
-        expenses.splice(index, 1);
-        renderExpenses();
-    }
+    console.log(expenses[index]);
+    total -= expenses[index].amount
+    expenses.splice(index, 1)
+    renderExpenses()
 }
 
 expenseList.addEventListener("click", function (event) {
-    const deleteButton = event.target.closest('.delete-expense-btn');
-    if (deleteButton) {
-        const expenseItem = deleteButton.closest('.expense-item');
-        const index = Array.from(expenseItem.parentNode.children).indexOf(expenseItem);
+    if (event.target.classList.contains("delete-expense-btn")) {
+        const index = Array.from(event.target.parentNode.parentNode.children)
+            .indexOf(event.target.parentNode);
         deleteExpense(index);
     }
 });
