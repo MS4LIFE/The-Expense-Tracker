@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    border-style: border-box;
+    font-family: sans-serif;
+}
+
+.expense-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+    max-width: 500px;
+    margin: 0 auto;
+    /* This centers the expense-header on the page horizontally */
+    margin-top: 50px;
+    /* Adjust the top margin as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2{
+    text-align: left;
+    margin-right: 9.8rem;
+}
+
+.add-expense-btn {
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin-left: 10px;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.add-expense-btn:hover,
+.add-expense-btn:focus {
+    background-color: #07c;
+    transition: background-color 0.3s ease;
+}
+
+.add-expense-btn:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.add-expense-btn:active {
+    background-color: #0064bd;
+    box-shadow: none;
+}
+
+.total-expense {
+    align-self: flex-end;
+    margin-right: 1.8rem;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    /* Add some padding to the container */
+}
